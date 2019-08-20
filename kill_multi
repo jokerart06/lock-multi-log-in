@@ -19,7 +19,6 @@ if [ -f "/etc/openvpn/openvpn-status.log" ]; then
               cat /etc/openvpn/double_login.txt >> /etc/lock
               date >>  /etc/lock
               passwd -l $line
-              sudo service openvpn restart
             fi
           done < $filename
 fi
